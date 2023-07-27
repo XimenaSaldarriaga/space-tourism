@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
+
+.navbar {
+    display: flex;
+    gap: 2rem;
+    background-color: rgba(62, 60, 60, 0.1);
+
+    
+    &__item{
+        list-style: none;
+        color: #ffffff;
+        font-family: 'Barlow Condensed';
+        letter-spacing: 2.5px;
+    }
+}
