@@ -8,8 +8,10 @@ const Home = () => {
     return (
         <div className='home'>
             <div className='home__header'>
-                <img className='home__' src={logo} alt="" />
+                <div className='home__logodiv'>
+                <img className='home__logo' src={logo} alt="" />
                 <span className='home__span'>________________________________________________</span>
+                </div>
                 <Navbar />
             </div>
             <Space />
