@@ -3,7 +3,8 @@
 .navbar {
     display: flex;
     gap: 2rem;
-    background-color: rgba(62, 60, 60, 0.1);
+    background-color: rgba(60, 60, 62, 0.329);
+    width: 100%;
 
     
     &__item{
@@ -11,5 +12,7 @@
         color: #ffffff;
         font-family: 'Barlow Condensed';
         letter-spacing: 2.5px;
+        margin: 30px 0px 30px 0px;
+        cursor: pointer;
     }
 }
