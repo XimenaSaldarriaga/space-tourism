@@ -12,6 +12,7 @@ const Home = () => {
                 <img className='home__logo' src={logo} alt="" />
                 <span className='home__span'>________________________________________________</span>
                 </div>
+                <></>
                 <Navbar />
             </div>
             <Space />
