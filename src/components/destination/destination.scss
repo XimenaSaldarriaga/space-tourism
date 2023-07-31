@@ -1,8 +1,7 @@
-
+@import '../../variables.scss';
 
 .destinationContainer {
   height: 100%;
-  width: 100vw;
   background-image: url("../../data/assets/destination/background-destination-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,140 +9,119 @@
 
 .destination {
   display: flex;
-  height: 100vh;
-  width: 100vw;
-  .article {
-    h2 {
-      position: absolute;
-      width: 382px;
-      height: 34px;
-      left: 166.5px;
-      top: 212px;
-    }
+  height: 100%;
+  margin: 0px 100px 0px 100px;
+  justify-content: space-between;
+  padding: 4.3rem 5rem 8rem 5rem;
 
-    img {
-      position: absolute;
-      width: 445px;
-      height: 445px;
-      left: 230px;
-      top: 343px;
-    }
+  &__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 560px;
   }
 
-  .item2 {
-    position: absolute;
+
+  &__title {
+    font-family: $font-primary;
+    display: flex;
+    gap: 1rem;
+    font-size: 28px;
+    letter-spacing: 5px;
+  }
+
+  &__number {
+    color: rgba(128, 128, 128, 0.482);
+    font-weight: 900;
+  }
+
+  &__pick {
+    color: $color-secondary;
+  }
+
+  &__image {
+    padding-left: 50px;
+  }
+
+
+  &__article2 {
     width: 445px;
-    height: 472px;
-    left: 858px;
-    top: 301px;
+    display: flex;
+    flex-direction: column;
+    align-self: self-end;
+  }
 
-    ul {
-      display: flex;
-      flex-direction: row;
-      gap: 15px;
 
-      justify-content: space-between;
+  &__nav {
+    display: flex;
+    gap: 2rem;
+    display: flex;
+    align-self: self-start;
+    padding: 0
+  }
 
-      li {
-        list-style: none;
-        font-family: "Barlow Condensed";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-        letter-spacing: 2.7px;
-      }
-    }
+  &__button {
+    font-family: $font-primary;
+    letter-spacing: 2.5px;
+    display: flex;
+    gap: 1rem;
+    background-color: transparent;
+    border: none;
+    color: $color-secondary;
+    font-size: 18px;
+    cursor: pointer;
+  }
 
-    .name {
-      font-family: "Bellefair";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 100px;
-      line-height: 115px;
-      color: #ffffff;
-    }
 
-    button {
-      width: 60px;
-      height: 60px;
-      background-color: transparent;
-      color: #ffffff;
-      font-size: 25px;
-      cursor: pointer;
-      border: none;
-      margin: 5px;
-    }
-    p {
-      font-family: Barlow;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 32px;
-      letter-spacing: 0px;
-      text-align: left;
-      color: white;
-    }
+  &__name {
+    margin: 15px 0px 20px 0px;
+    font-family: $font-secondary;
+    font-weight: 400;
+    font-size: 100px;
+    color: #ffffff;
+  }
 
-    hr {
-      position: absolute;
-      left: 0.22%;
-      right: 0%;
-      top: 80.93%;
-      bottom: 18.86%;
-      background: #383b4b;
-    }
-    .distance-travel {
-      font-family: "Barlow Condensed";
-      font-style: normal;
-      font-weight: 400;
+
+
+  p {
+    font-family: Barlow;
+    color: $color-primary;
+    font-size: 18px;
+    line-height: 2rem;
+  }
+
+  hr {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  &__dates {
+    display: flex;
+    gap: 4rem;
+  }
+
+  &__distance {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &--span{
+      font-family: $font-primary;
+      color: $color-primary;
       font-size: 14px;
-      line-height: 17px;
-      letter-spacing: 2.3625px;
-      text-transform: uppercase;
-      color: #d0d6f9;
-      padding-top: 20px;
-      position: absolute;
-      left: 0.11%;
-      right: 65.06%;
-      top: 87.08%;
-      bottom: 0%;
+      letter-spacing: 2px;
+    }
 
-      width: 445px;
-      display: flex;
-      justify-content: space-between;
-
-      .avgDistance {
-        font-family: Barlow Condensed;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 17px;
-        letter-spacing: 2.362499952316284px;
-        text-align: left;
-        span {
-          font-family: Bellefair;
-          font-size: 28px;
-          font-weight: 400;
-          line-height: 32px;
-          letter-spacing: 0px;
-          text-align: left;
-        }
-      }
-      .travelTime {
-        font-family: Barlow Condensed;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 17px;
-        letter-spacing: 2.362499952316284px;
-        text-align: left;
-        span {
-          font-family: Bellefair;
-          font-size: 28px;
-          font-weight: 400;
-          line-height: 32px;
-          letter-spacing: 0px;
-          text-align: left;
-        }
-      }
+    &--time {
+      font-family: $font-secondary;
+      color: $color-secondary;
+      font-size: 28px;
+      letter-spacing: 2px;
     }
   }
-}
+
+
+    }
+
+
