@@ -1,9 +1,23 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
+
+.homeContainer {
+    height: 100%;
+    background-image: url("../../data/assets/home/background-home-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
 
 .space{
     display: flex;
-    margin: 100px;
+    margin: 50px 100px 50px 100px;
     justify-content: space-between;
     padding: 4.3rem 5rem 8rem 5rem;
 
@@ -12,7 +26,7 @@
         flex-direction: column;
         width: 40%;
         font-family: 'Barlow', sans-serif;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     &__travel {
@@ -24,8 +38,8 @@
 
     &__title {
         color: #ffffff;
-        font-family: 'Bellefair', serif;
-        font-size: 150px;
+        font-family: 'Bellefair' ;
+        font-size: 145px;
         letter-spacing: 1.5px;
     }
 
@@ -39,6 +53,7 @@
         background-color:  #ffffff;
         height: 280px;
         width: 280px;
+        border: none;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -46,5 +61,7 @@
         justify-content: center;
         font-family: 'Bellefair', serif;
         font-size: 35px;
+        cursor: pointer;
     }
 }
+
