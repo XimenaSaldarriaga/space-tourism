@@ -8,53 +8,45 @@ export const Destination = () => {
   const [value, setValue] = useState(0);
 
   const { name, images, description, distance, travel } = planets[value];
+
   return (
     <div className="destinationContainer">
       <Navbar />
-      <section>
-        <div className="destination">
-          <article className="article">
-            <h2 className="title">
-              01
-              <span>PICK YOUR DESTINATION</span>
-            </h2>
+      <div className="destination">
+        <article className="destination__article">
+          <div className="destination__title">
+            <span className="destination__number" >01</span>
+            <span className="destination__pick" >PICK YOUR DESTINATION</span>
+          </div>
+          <img className="destination__image" src={images.png} alt={name} title={name} />
+        </article>
 
-            <img className="img" src={images.png} alt={name} title={name} />
-          </article>
-
-          <article className="item2">
-            <ul className="navMenu">
-              {planets.map((item, index) => (
-                <li key={index}>
-                  <button onClick={() => setValue(index)}>{item.name}</button>
-                </li>
-              ))}
-            </ul>
-
-            <h2 className="name">{name}</h2>
-
-            <p>{description}</p>
-            <hr />
-
-            <ul className="distance-travel">
-              <li className="avgDistance">
-                Avg. Distance
-                <span>
-                  <br></br>
-                  {distance}
-                </span>
+        <article className="destination__article2">
+          <ul className="destination__nav">
+            {planets.map((item, index) => (
+              <li className="destination__button" key={index} onClick={() => setValue(index)}>{item.name}
               </li>
-              <li className="travelTime">
-                Est. travel time
-                <span>
-                  <br></br>
-                  {travel}
-                </span>
-              </li>
-            </ul>
-          </article>
-        </div>
-      </section>
+            ))}
+          </ul>
+
+          <h2 className="destination__name">{name}</h2>
+
+          <p>{description}</p>
+
+            <hr></hr>
+
+          <div className="destination__dates">
+            <div className="destination__distance">
+              <span className="destination__distance--span">AVG. DISTANCE </span>
+              <span className="destination__distance--time">{distance}</span>
+            </div>
+            <div className="destination__distance">
+              <span className="destination__distance--span">EST. TRAVEL TIME</span>
+              <span className="destination__distance--time">{travel}</span>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
   );
 };
