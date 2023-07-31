@@ -1,5 +1,6 @@
 import { useState } from "react";
 import data from "../../../data.json";
+import "./style.scss"
 
 export const Destination = () => {
   const [planets] = useState(data.destinations);
