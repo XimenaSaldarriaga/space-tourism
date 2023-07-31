@@ -8,46 +8,46 @@ export const Technology = () => {
   const [value, setValue] = useState(0);
 
   const { name, images, description } = technology[value];
+
+
   return (
-    <div className="technologyContainer">
-      <Navbar />
-      <section className="technology">
-        <div>
-          <article>
-            <h2 className="title">
-              03
-              <span>SPACE LAUNCH 101</span>
-            </h2>
+    <>
+      <div className="technology">
+        <Navbar />
+        <div className="technology__container">
+          <div className="technology__left">
 
-            <div>
-              <article className="item">
-                <ul>
-                  {technology.map((item, index) => (
-                    <li key={index}>
-                      <button onClick={() => setValue(index)}>
-                        {index + 1}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-
-              <article className="info">
-                <h3>The terminology...</h3>
-
-                <h2>{name}</h2>
-
-                <p>{description}</p>
-              </article>
+            <div className="technology__title">
+              <span className="technology__number">03</span>
+              <span className="technology__space">SPACE LAUNCH 101</span>
             </div>
-          </article>
 
-          <article className="img">
+            <div className="technology__all">
+
+              <ul className="technology__item">
+                {technology.map((item, index) => (
+                    <button key={index} onClick={() => setValue(index)}>
+                      {index + 1}
+                    </button>
+                ))}
+              </ul>
+
+              <div className="technology__info">
+                <p className="technology__span">THE TERMINOLOGY...</p>
+                <p className="technology__name">{name.toUpperCase()}</p>
+                <p className="technology__description">{description}</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div className="technology__image">
             <img src={images.portrait} alt={name} />
-          </article>
+          </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </>
   );
 };
 

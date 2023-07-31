@@ -17,15 +17,18 @@ export default function Crew() {
         <Navbar />
         <div className="crew__container container">
           <article className="crew__left">
-            <h2>
-              <span>02</span> MEET YOUR CREW
-            </h2>
-            <div className="crew__info">
-              <h3>{role}</h3>
-              <h2>{name}</h2>
-              <p>{bio}</p>
+
+            <div className="crew__title">
+              <span className="crew__number">02</span>
+              <span className="crew__meet"> MEET YOUR CREW</span>
             </div>
-            <ul>
+
+            <div className="crew__info">
+              <span className="crew__role">{role}</span>
+              <span className="crew__name">{name.toUpperCase()}</span>
+              <p className="crew__bio">{bio}</p>
+            </div>
+            <ul className="crew__ul">
               {crew.map((item, index) => (
                 <li key={index}>
                   <button
