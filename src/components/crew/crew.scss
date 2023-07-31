@@ -7,7 +7,7 @@
     background-size: cover;
 
     &__left {
-      width: 445px;
+      width: 600px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -75,8 +75,12 @@
       }
       button {
         background: none;
-        color: white;
+        color: gray;
         cursor: pointer;
         border: none;
       }
     }
+
+    .white{
+      color: $color-primary !important;
+  }

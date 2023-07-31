@@ -1,13 +1,13 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Navbar from "../navbar/Navbar";
 import "./destination.scss";
 import data from "../../data/data.json";
 
 export const Destination = () => {
   const [planets] = useState(data.destinations);
-  const [value, setValue] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const { name, images, description, distance, travel } = planets[value];
+  const { name, images, description, distance, travel } = planets[activeIndex];
 
   return (
     <div className="destinationContainer">
@@ -15,16 +15,26 @@ export const Destination = () => {
       <div className="destination">
         <article className="destination__article">
           <div className="destination__title">
-            <span className="destination__number" >01</span>
-            <span className="destination__pick" >PICK YOUR DESTINATION</span>
+            <span className="destination__number">01</span>
+            <span className="destination__pick">PICK YOUR DESTINATION</span>
           </div>
-          <img className="destination__image" src={images.png} alt={name} title={name} />
+          <img
+            className="destination__image"
+            src={images.png}
+            alt={name}
+            title={name}
+          />
         </article>
 
         <article className="destination__article2">
           <ul className="destination__nav">
             {planets.map((item, index) => (
-              <li className="destination__button" key={index} onClick={() => setValue(index)}>{item.name}
+              <li
+                className={`destination__button ${index === activeIndex ? 'active' : ''}`}
+                key={index}
+                onClick={() => setActiveIndex(index)}
+              >
+                {item.name}
               </li>
             ))}
           </ul>
@@ -33,7 +43,7 @@ export const Destination = () => {
 
           <p>{description}</p>
 
-            <hr></hr>
+          <hr></hr>
 
           <div className="destination__dates">
             <div className="destination__distance">
@@ -52,3 +62,4 @@ export const Destination = () => {
 };
 
 export default Destination;
+

@@ -7,41 +7,47 @@ export const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar__left">
-        <img src={logo} alt="logo"></img>
+        <img src={logo} alt="logo" />
       </div>
 
       <div className="navbar__hr">
-      <hr></hr>
+        <hr />
       </div>
 
-      <ul className="navbar__list">
-        <li>
-          <NavLink className="navbar__item" to="/">
+      <div className="navbar__list">
+
+          <NavLink
+            className="navbar__item"
+            to="/"
+            activeClassName="active"
+          >
             <span className="navbar__number">00</span> HOME
           </NavLink>
-        </li>
-        <li>
-          <NavLink className="navbar__item"
+          
+          <NavLink
+            className="navbar__item"
             to="/destination"
+            activeClassName="active"
           >
             <span className="navbar__number">01</span> DESTINATION
           </NavLink>
-        </li>
-        <li>
-          <NavLink className="navbar__item"
+
+          <NavLink
+            className="navbar__item"
             to="/crew"
+            activeClassName="active"
           >
             <span className="navbar__number">02</span> CREW
           </NavLink>
-        </li>
-        <li>
-          <NavLink className="navbar__item"
+
+          <NavLink
+            className="navbar__item"
             to="/technology"
+            activeClassName="active"
           >
             <span className="navbar__number">03</span> TECHNOLOGY
           </NavLink>
-        </li>
-      </ul>
+      </div>
     </nav>
   );
 };

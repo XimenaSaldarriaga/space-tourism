@@ -94,10 +94,9 @@
     font-size: 30px;
     cursor: pointer;
   }
+}
 
-  button:hover {
-    background-color: #ffffff;
-    color: #000000;
-  }
-
+.button-selected{
+  background-color: #ffffff !important;
+  color: #000000 !important;
 }
