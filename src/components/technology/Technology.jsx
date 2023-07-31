@@ -9,26 +9,27 @@ export const Technology = () => {
 
   const { name, images, description } = technology[value];
 
-
   return (
     <>
       <div className="technology">
         <Navbar />
         <div className="technology__container">
           <div className="technology__left">
-
             <div className="technology__title">
               <span className="technology__number">03</span>
               <span className="technology__space">SPACE LAUNCH 101</span>
             </div>
 
             <div className="technology__all">
-
               <ul className="technology__item">
                 {technology.map((item, index) => (
-                    <button key={index} onClick={() => setValue(index)}>
-                      {index + 1}
-                    </button>
+                  <button
+                    key={index}
+                    className={value === index ? "button-selected" : ""}
+                    onClick={() => setValue(index)}
+                  >
+                    {index + 1}
+                  </button>
                 ))}
               </ul>
 
@@ -37,9 +38,7 @@ export const Technology = () => {
                 <p className="technology__name">{name.toUpperCase()}</p>
                 <p className="technology__description">{description}</p>
               </div>
-
             </div>
-
           </div>
 
           <div className="technology__image">

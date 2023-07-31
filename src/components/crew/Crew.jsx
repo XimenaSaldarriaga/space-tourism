@@ -11,6 +11,10 @@ export default function Crew() {
 
   const { name, images, role, bio } = crew[value];
 
+  const handleButtonClick = (index) => {
+    setValue(index);
+  };
+
   return (
     <>
       <section className="crew">
@@ -29,17 +33,17 @@ export default function Crew() {
               <p className="crew__bio">{bio}</p>
             </div>
             <ul className="crew__ul">
-              {crew.map((item, index) => (
-                <li key={index}>
-                  <button
-                    onClick={() => setValue(index)}
-                    className={`${index === value}`}
-                  >
-                    <BsCircleFill />
-                  </button>
-                </li>
-              ))}
-            </ul>
+          {crew.map((item, index) => (
+            <li key={index}>
+              <button
+                onClick={() => handleButtonClick(index)}
+                className={index === value ? "white" : ""}
+              >
+                <BsCircleFill />
+              </button>
+            </li>
+          ))}
+        </ul>
           </article>
 
           <article>
