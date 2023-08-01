@@ -1,86 +1,130 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
 
 .crew {
-    background-image: url("../../data/assets/crew/background-crew-desktop.jpg");
+  background-image: url("../../data/assets/crew/background-crew-desktop.jpg");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  &__left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__container {
+    display: flex;
     height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    // margin: 0px 100px 0px 100px;
+    justify-content: center;
+    padding: 4.3rem 5rem 0rem 5rem;
+    gap: 30px;
+  }
 
-    &__left {
-      width: 600px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      margin-bottom: 100px;
-    }
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
 
+  &__title {
+    font-family: $font-primary;
+    display: flex;
+    gap: 1rem;
+    font-size: 25px;
+    letter-spacing: 5px;
+
+  }
+
+  &__number {
+    color: rgba(128, 128, 128, 0.482);
+    font-weight: 900;
+  }
+
+  &__meet {
+    color: $color-secondary;
+  }
+
+  &__role {
+    font-family: $font-secondary;
+    color: gray;
+    font-size: 28px;
+  }
+
+  &__name {
+    margin-top: 20px;
+    font-family: $font-secondary;
+    color: $color-secondary;
+    font-size: 40px;
+  }
+
+  &__bio {
+    font-family: Barlow;
+    color: $color-primary;
+    font-size: 18px;
+    line-height: 2rem;
+  }
+
+  &__ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    list-style: none;
+  }
+
+  button {
+    background: none;
+    color: gray;
+    cursor: pointer;
+    border: none;
+  }
+
+  &__image img {
+    width: auto;
+    height: auto;
+  }
+}
+
+.white {
+  color: $color-primary !important;
+}
+@media screen and (max-width: 850px) {
+  .crew {
+    background-image: url("../../data/assets/crew/background-crew-tablet.jpg");
 
     &__container {
       display: flex;
-      height: 100%;
-      margin: 0px 100px 0px 100px;
-      justify-content: space-between;
-      padding: 4.3rem 5rem 0rem 5rem;
+      flex-direction: column;
+      margin: 0px;
+      align-items: center;
     }
 
     &__info {
       display: flex;
-      flex-direction: column;
+      margin-top: 20px;
     }
-
 
     &__title {
-      font-family: $font-primary;
-      display: flex;
-      gap: 1rem;
-      font-size: 28px;
-      letter-spacing: 5px;
-    }
-
-    &__number {
-      color: rgba(128, 128, 128, 0.482);
-      font-weight: 900;
-    }
-
-    &__meet {
-      color: $color-secondary;
+      text-align: left;
     }
 
     &__role {
-      font-family: $font-secondary;
-      color: gray;
-      font-size: 30px;
+      text-align: center;
     }
 
     &__name {
-      margin-top: 20px;
-      font-family: $font-secondary;
-      color: $color-secondary;
-      font-size: 50px;
+      text-align: center;
     }
 
     &__bio {
-      font-family: Barlow;
-      color: $color-primary;
-      font-size: 18px;
-      line-height: 2rem;
+      text-align: center;
     }
-    
-    &__ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 30px;
-        list-style: none;
-      }
-      button {
-        background: none;
-        color: gray;
-        cursor: pointer;
-        border: none;
-      }
-    }
-
-    .white{
-      color: $color-primary !important;
   }
+
+  .crew__ul {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../data/assets/shared/logo.svg";
+import hamburgerIcon from "../../data/assets/shared/icon-hamburger.svg"
 import { NavLink } from "react-router-dom";
 import "./navbar.scss";
 
@@ -13,7 +14,6 @@ export const Navbar = () => {
       <div className="navbar__hr">
         <hr />
       </div>
-
       <div className="navbar__list">
 
           <NavLink

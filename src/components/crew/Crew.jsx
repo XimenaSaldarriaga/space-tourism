@@ -28,10 +28,12 @@ export default function Crew() {
             </div>
 
             <div className="crew__info">
+            <br />
               <span className="crew__role">{role}</span>
               <span className="crew__name">{name.toUpperCase()}</span>
               <p className="crew__bio">{bio}</p>
             </div>
+            <br />
             <ul className="crew__ul">
           {crew.map((item, index) => (
             <li key={index}>
@@ -46,7 +48,7 @@ export default function Crew() {
         </ul>
           </article>
 
-          <article>
+          <article className="crew__image">
             <img src={images.png} alt={name} title={name} />
           </article>
         </div>
