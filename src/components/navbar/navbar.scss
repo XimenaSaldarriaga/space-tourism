@@ -1,0 +1,139 @@
+@import "../../variables.scss";
+
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    margin: 0 auto;
+    height: 96px;
+    left: 55px;
+    top: 40px;
+
+    &__hamburger {
+      display: none;
+    }
+
+    &__number {
+      font-weight: bolder;
+    }
+
+    &__item {
+      list-style: none;
+      color: $color-secondary; 
+      font-family: $font-primary;
+      letter-spacing: 2.5px;
+      margin: 30px 0px 30px 0px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      gap: 40px;
+      padding-right: 100px;
+      padding-left: 100px;
+      height: 80px;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(40.7742px);
+      transition: padding 0.3s ease;
+
+      span {
+        margin-right: 10px;
+      }
+    }
+
+    &__left {
+      width: 48px;
+      height: 48px;
+      margin-left: 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    &__hr {
+      transform: rotate(90deg);
+      height: 400px;
+      background-color: #2d2d2d;
+    }
+  }
+
+
+@media screen and (max-width: 850px) {
+  .navbar {
+    height: 96px;
+    left: 39px;
+
+    &__number {
+      display: none;
+    }
+
+    &__list {
+      padding: 20px;
+      margin-top: 0px;
+      font-size: 18px;
+      transition: padding 0.3s ease;
+    }
+
+    &__hr {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .navbar {
+    justify-content: space-around;
+    align-items: center;
+    gap: 65px;
+
+    &__list {
+      display: none;
+      flex-direction: column;
+      transition: max-height 0.3s ease;
+    }
+
+    &__hamburger {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.3s ease; 
+    }
+
+    &__sidebar {
+      position: fixed;
+      left: -300px;
+      height: 100vh;
+      width: 300px;
+      background-color: #ffffff;
+      transition: transform 0.3s ease;
+    }
+
+    &.show {
+      &__list {
+        display: flex;
+  
+      }
+
+      &__sidebar {
+        transform: translateX(300px);
+      }
+    }
+
+    &__hr {
+      display: none;
+    }
+
+    &__left {
+      margin-left: 0px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
