@@ -44,6 +44,11 @@ export const Technology = () => {
           <div className="technology__image">
             <img src={images.portrait} alt={name} />
           </div>
+          <div className="technology__image__lands">
+
+            <img src={images.landscape} alt={name} />
+
+          </div>
         </div>
       </div>
     </>
