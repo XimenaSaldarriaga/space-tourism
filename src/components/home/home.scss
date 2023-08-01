@@ -38,6 +38,7 @@
       font-family: $font-primary;
       font-size: 28px;
       letter-spacing: 4px;
+      transition: font-size 0.3s ease, letter-spacing 0.3s ease;
     }
 
     &__title {
@@ -45,6 +46,7 @@
       font-family: $font-secondary;
       font-size: 145px;
       letter-spacing: 1.5px;
+      transition: font-size 0.3s ease, letter-spacing 0.3s ease;
     }
 
     &__lets {
@@ -77,6 +79,7 @@
     .space {
       display: flex;
       flex-direction: column;
+      
 
       &__text {
         display: flex;
@@ -85,6 +88,48 @@
         justify-content: center;
         align-self: center;
         width: 100%;
+      }
+
+      &__explore {
+        align-self: center;
+        margin-top: 55px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .homeContainer {
+    background-image: url("../../data/assets/home/background-home-mobile.jpg");
+
+    .space {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+
+      &__text {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        align-self: center;
+        width: 100%;
+      }
+      &__travel {
+        font-size: 18px;
+        letter-spacing: 3px;
+      }
+  
+      &__title {
+        font-size: 100px;
+        letter-spacing: 1.5px;
+      }
+  
+      &__lets {
+
+        font-size: 16px;
+        line-height: 2rem; 
+        flex-wrap: wrap ;
       }
 
       &__explore {
