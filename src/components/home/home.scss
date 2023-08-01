@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
 @import "../../variables.scss";
 
-@media screen and (max-width: 1500px) {
+// @media screen and (max-width: 1500px) {
 
   body,
   html {
@@ -21,7 +21,7 @@
 
   .space {
     display: flex;
-    // margin: 50px 100px 50px 100px;
+    margin: 50px 100px 50px 100px;
     justify-content: space-between;
     padding: 4.3rem 5rem 8rem 5rem;
 
@@ -70,7 +70,7 @@
       cursor: pointer;
     }
   }
-}
+
 
 @media screen and (max-width: 850px) {
   .homeContainer {

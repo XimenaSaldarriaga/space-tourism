@@ -1,6 +1,6 @@
 @import "../../variables.scss";
 
-@media screen and (max-width: 1500px) {
+
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -63,7 +63,7 @@
       background-color: #2d2d2d;
     }
   }
-}
+
 
 @media screen and (max-width: 850px) {
   .navbar {
